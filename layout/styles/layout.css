@@ -471,4 +471,7 @@ table a, #comments a{background-color:inherit;}
 	margin-top:16px;
 }
 
-
+.iconfooter{
+	color: #00bfff;
+	padding-right: 5px;
+}
