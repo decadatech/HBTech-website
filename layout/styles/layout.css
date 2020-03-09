@@ -332,7 +332,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
 
 #footer nav a{color:inherit;}
-#footer nav li:first-child a, #footer nav a:hover{color:deepskyblue;}
+#footer nav li:first-child a, #footer nav a:hover{color:inherit;}
 
 #footer .faico a{color:inherit; background-color:#2B2F32;}
 #footer .faico a:hover{color:#FFFFFF;}
@@ -470,5 +470,11 @@ table a, #comments a{background-color:inherit;}
 .my-float{
 	margin-top:16px;
 }
+
+.iconfooter{
+	color: #00bfff;
+	padding-right: 5px;	
+}
+
 
 
