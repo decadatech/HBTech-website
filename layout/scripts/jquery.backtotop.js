@@ -1,16 +1,7 @@
-/*
-Template Name: Hoppler
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
-File: Back to Top JS
-*/
-
 jQuery("#backtotop").click(function () {
     jQuery("body,html").animate({
         scrollTop: 0
-    }, 600);
+    }, 1000);
 });
 jQuery(window).scroll(function () {
     if (jQuery(window).scrollTop() > 150) {
@@ -18,4 +9,28 @@ jQuery(window).scroll(function () {
     } else {
         jQuery("#backtotop").removeClass("visible");
     }
+});
+
+jQuery(".homeNav").click(function () {
+    jQuery("body,html").animate({
+        scrollTop: 0
+    }, 1000);
+});
+
+jQuery(".sobreNav").click(function () {
+    jQuery("body,html").animate({
+        scrollTop: $('#sobre').offset().top
+    }, 1000);
+});
+
+jQuery(".obraNav").click(function () {
+    jQuery("body,html").animate({
+        scrollTop: $('#obras').offset().top
+    }, 1000);
+});
+
+jQuery(".servicoNav").click(function () {
+    jQuery("body,html").animate({
+        scrollTop: $('#servico').offset().top
+    }, 1000);
 });
