@@ -6,7 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 	<!-- FONTAWESOME KIT -->
-	<script src="https://kit.fontawesome.com/1d2d5821dc.js"></script>
+  <script src="https://kit.fontawesome.com/1d2d5821dc.js"></script>
+  
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAATCAYAAACZZ43PAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/UlEQVQ4jbWTWUhUURjHv7PeWZvUZqTUMCxNo8WpaHmwEsO2saQgjMqHJClarIeohxaiTWihhXoLjIIKKixKWwh8MMMeSttsT6dxrHGsdNZ777mnlzKMSeih/+M53/nBOf/fAfifOXm1iVZfbUkebAYPttn4MrCovvWL/85rP/lnQNWZ2omCIKwCA5/vK9twpHZsojn050JDWye+eLvZ/aTb3GxR2NtelWfZqfqO6TG2ZcnoLLPZArNy040BgBWHbnqSk+wtNkWlTe+011NGsXGBEFr0LKAcNiQFG4v3TXLFZ3b1xEtCgi+v31U8ceXRG0Vc17wEACCtYHVN+ze5VzWwMxBR8sGQSe1fYb2dig9JFvVcVIXJgSjyGIQlR4VpVG5h2QxvSNlvosKHAQCK8kcUOK1ojzekrBKEQmcIeZxWfe8899Dxt7YXbXWnQa6JiEfBGJnTp5PUMPCpo5Pl3Cs7SqopAEBv5ytLRLMuEIIgJDHkZ5D5p9cWPrj+856nKgs/AUDZwkP3u/whUaVrRmo0JgoA4D4GABientGnEGifkkErkSGAGGpPwsqE+OZQxPsMm9iCQPT017hu4XTDTkWjnYsWiSQAiITVSjDAMGTcNoQ8VEjsZT9gT01tij/M9j38CA2AGEjGE4uDMIpInvPcjx6FdVbxG1C+OJjl4hWaRFwChhc+/UL5ibpZv84drXtGS6vrNwZVskkTGNu4/JCd6qjq98BzoP5sIGIqH2KF1kAfm+Syq23fwyI7xSQuDbPRa97vxs6ITnLMCnjjBncxGQsKgYemmyLrMQAAM/T3mQ69NN8ll3EZgbxh+tIxqXjH55ilrLXbdFkDnulOl9NsUq1hRryjMMea51DixxDRuweoXH2+jr8JaNMUJNUnQcs9RBUWEZRzrGoOHH2Rl6J5Yjo4z2wueTxA5T9z/OZT2vS0Yw0luLc9bK6ZmonyOr/E3Be3FV9O+Lh/y/KDN0pn774bv93m++t3poMBcpz8zkhCJhSPTUssBgD8AKQlPq0Iv201AAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+    
 </head>
 <body id="top">
 
@@ -20,14 +23,15 @@
     <div class="wrapper row1">
     <header id="header" class="hoc clear"> 
       <div id="logo" class="fl_left">
-        <h1><a href="index.html">HB Tech</a></h1>
+        <a href="index.html"><img src="images/logo.png"> </a>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
           <li class="active"><a class="nav-link scroll homeNav" href="index.html">Home</a></li>
-		  <li><a href="#sobre" class="sobreNav"> Sobre nós </a></li>
+		      <li><a href="#sobre" class="sobreNav"> Sobre nós </a></li>
           <li><a href="#obras" class="obraNav"> Obras </a></li>
           <li><a href="#servico" class="servicoNav"> Serviços </a></li>
+          <li><a href="#contato" class="contatoNav"> Contato </a></li>
         </ul>
       </nav>
     </header>
@@ -36,7 +40,7 @@
     <article> 
       <h3 class="heading">Ar Condicionado e Refrigeração</h3>
       <p>O Melhor para garantir um clima agradável o ano inteiro</p>
-      <footer><a class="btn" href="#">Entre em Contato</a></footer>
+      <footer><a class="btn" target="_blank" href="https://api.whatsapp.com/send?phone=5511953884518&text=Oi,%20tudo%20bem?%20Gostaria%20de%20pedir%20um%20or%C3%A7amento,%20poderia%20me%20ajudar?">Entre em Contato</a></footer>
     </article>
   </div>
 </div>
@@ -199,13 +203,22 @@
 </div>
 
 
-
+<div class="contact-section" id="contato">
+  <div class="inner-width">
+    <h1>Entre em contato conosco!</h1>
+    <input type="text" class="name" placeholder="Seu nome">
+    <input type="text" id="phone" class="email" placeholder="Seu telefone">
+    <input type="email" class="message" placeholder="Seu e-mail">
+    <textarea rows="1" placeholder="Mensagem" class="message"></textarea>
+    <button>Enviar</button>
+  </div>
+</div>
 
 
 <div class="wrapper row4">
   <footer id="footer" class="hoc clear"> 
     <div class="one_quarter first">
-      <h1>HB Tech</h1>
+      <img src="images/hbtechbranco.png">
       
     </div>
     <div class="one_quarter ">
@@ -220,7 +233,9 @@
           <li><a href="index.html#"><i class="fa fa-lg fa-home" class="homeNav"></i></a></li><br/>
           <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#sobre" class="sobreNav">Sobre nós</a></li></br>
           <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#obras" class="obraNav">Obras</a></li></br>
-          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#servico" class="servicoNav">Serviços</a></li></br>          
+          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#servico" class="servicoNav">Serviços</a></li></br> 
+          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#contato" class="contatoNav">Contato</a></li></br>          
+         
         </ul>
       </nav>
       <ul class="faico clear">
@@ -258,14 +273,13 @@
 <i class="fa fa-whatsapp my-float"></i>
 </a> -->
     
-
-    
     
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/indexFunctions.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.mask.js"></script>
 <!--ON SCROLL ANIMATE JS CDN-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
