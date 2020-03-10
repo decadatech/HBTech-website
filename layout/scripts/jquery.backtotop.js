@@ -34,3 +34,9 @@ jQuery(".servicoNav").click(function () {
         scrollTop: $('#servico').offset().top
     }, 1000);
 });
+
+jQuery(".contatoNav").click(function () {
+    jQuery("body,html").animate({
+        scrollTop: $('#contato').offset().top
+    }, 1000);
+});

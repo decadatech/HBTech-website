@@ -35,6 +35,11 @@ $("#mainav select").change(function(){
             scrollTop: $('#servico').offset().top
         }, 1000);
     }
+    if(classe == "#contato"){
+        jQuery("body,html").animate({
+            scrollTop: $('#contato').offset().top
+        }, 1000);
+    }
     if(classe == "index.html"){
         jQuery("body,html").animate({
             scrollTop: 0
