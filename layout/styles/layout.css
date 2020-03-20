@@ -1,17 +1,12 @@
 @charset "utf-8";
-/*
-Template Name: Hoppler
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
-File: Layout CSS
-*/
+
 
 @import url("font-awesome.min.css");
 @import url("framework.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+p{font-size: 1.1rem;}
+#titleService{font-size: 1.8rem; color: darkblue;}
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0{background-color: deepskyblue}
