@@ -1,128 +1,141 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
-	<title>HB Tech</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-	<!-- FONTAWESOME KIT -->
+  <title>HB Tech</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <!-- FONTAWESOME KIT -->
   <script src="https://kit.fontawesome.com/1d2d5821dc.js"></script>
-  
-    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAATCAYAAACZZ43PAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/UlEQVQ4jbWTWUhUURjHv7PeWZvUZqTUMCxNo8WpaHmwEsO2saQgjMqHJClarIeohxaiTWihhXoLjIIKKixKWwh8MMMeSttsT6dxrHGsdNZ777mnlzKMSeih/+M53/nBOf/fAfifOXm1iVZfbUkebAYPttn4MrCovvWL/85rP/lnQNWZ2omCIKwCA5/vK9twpHZsojn050JDWye+eLvZ/aTb3GxR2NtelWfZqfqO6TG2ZcnoLLPZArNy040BgBWHbnqSk+wtNkWlTe+011NGsXGBEFr0LKAcNiQFG4v3TXLFZ3b1xEtCgi+v31U8ceXRG0Vc17wEACCtYHVN+ze5VzWwMxBR8sGQSe1fYb2dig9JFvVcVIXJgSjyGIQlR4VpVG5h2QxvSNlvosKHAQCK8kcUOK1ojzekrBKEQmcIeZxWfe8899Dxt7YXbXWnQa6JiEfBGJnTp5PUMPCpo5Pl3Cs7SqopAEBv5ytLRLMuEIIgJDHkZ5D5p9cWPrj+856nKgs/AUDZwkP3u/whUaVrRmo0JgoA4D4GABientGnEGifkkErkSGAGGpPwsqE+OZQxPsMm9iCQPT017hu4XTDTkWjnYsWiSQAiITVSjDAMGTcNoQ8VEjsZT9gT01tij/M9j38CA2AGEjGE4uDMIpInvPcjx6FdVbxG1C+OJjl4hWaRFwChhc+/UL5ibpZv84drXtGS6vrNwZVskkTGNu4/JCd6qjq98BzoP5sIGIqH2KF1kAfm+Syq23fwyI7xSQuDbPRa97vxs6ITnLMCnjjBncxGQsKgYemmyLrMQAAM/T3mQ69NN8ll3EZgbxh+tIxqXjH55ilrLXbdFkDnulOl9NsUq1hRryjMMea51DixxDRuweoXH2+jr8JaNMUJNUnQcs9RBUWEZRzrGoOHH2Rl6J5Yjo4z2wueTxA5T9z/OZT2vS0Yw0luLc9bK6ZmonyOr/E3Be3FV9O+Lh/y/KDN0pn774bv93m++t3poMBcpz8zkhCJhSPTUssBgD8AKQlPq0Iv201AAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
-    
+
+  <link
+    href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAATCAYAAACZZ43PAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/UlEQVQ4jbWTWUhUURjHv7PeWZvUZqTUMCxNo8WpaHmwEsO2saQgjMqHJClarIeohxaiTWihhXoLjIIKKixKWwh8MMMeSttsT6dxrHGsdNZ777mnlzKMSeih/+M53/nBOf/fAfifOXm1iVZfbUkebAYPttn4MrCovvWL/85rP/lnQNWZ2omCIKwCA5/vK9twpHZsojn050JDWye+eLvZ/aTb3GxR2NtelWfZqfqO6TG2ZcnoLLPZArNy040BgBWHbnqSk+wtNkWlTe+011NGsXGBEFr0LKAcNiQFG4v3TXLFZ3b1xEtCgi+v31U8ceXRG0Vc17wEACCtYHVN+ze5VzWwMxBR8sGQSe1fYb2dig9JFvVcVIXJgSjyGIQlR4VpVG5h2QxvSNlvosKHAQCK8kcUOK1ojzekrBKEQmcIeZxWfe8899Dxt7YXbXWnQa6JiEfBGJnTp5PUMPCpo5Pl3Cs7SqopAEBv5ytLRLMuEIIgJDHkZ5D5p9cWPrj+856nKgs/AUDZwkP3u/whUaVrRmo0JgoA4D4GABientGnEGifkkErkSGAGGpPwsqE+OZQxPsMm9iCQPT017hu4XTDTkWjnYsWiSQAiITVSjDAMGTcNoQ8VEjsZT9gT01tij/M9j38CA2AGEjGE4uDMIpInvPcjx6FdVbxG1C+OJjl4hWaRFwChhc+/UL5ibpZv84drXtGS6vrNwZVskkTGNu4/JCd6qjq98BzoP5sIGIqH2KF1kAfm+Syq23fwyI7xSQuDbPRa97vxs6ITnLMCnjjBncxGQsKgYemmyLrMQAAM/T3mQ69NN8ll3EZgbxh+tIxqXjH55ilrLXbdFkDnulOl9NsUq1hRryjMMea51DixxDRuweoXH2+jr8JaNMUJNUnQcs9RBUWEZRzrGoOHH2Rl6J5Yjo4z2wueTxA5T9z/OZT2vS0Yw0luLc9bK6ZmonyOr/E3Be3FV9O+Lh/y/KDN0pn774bv93m++t3poMBcpz8zkhCJhSPTUssBgD8AKQlPq0Iv201AAAAAElFTkSuQmCC"
+    rel="icon" type="image/x-icon" />
+
 </head>
+
 <body id="top">
 
-<!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('images/1.jpg');"> 
-  <div class="wrapper row0">
+  <!-- Top Background Image Wrapper -->
+  <div class="bgded overlay" style="background-image:url('images/1.jpg');">
+    <div class="wrapper row0">
       <p><img src="images/pre_header1.png"> (11) 95388-4518</p>
       <p><img src="images/pre_header2.png"> vitorebella@hotmail.com</p>
     </div>
-    
+
     <div class="wrapper row1">
-    <header id="header" class="hoc clear"> 
-      <div id="logo" class="fl_left">
-        <a href="index.html"><img src="images/logo.png"> </a>
-      </div>
-      <nav id="mainav" class="fl_right">
-        <ul class="clear">
-          <li class="active"><a class="nav-link scroll homeNav" href="index.html">Home</a></li>
-		      <li><a href="#sobre" class="sobreNav"> Sobre nós </a></li>
-          <li><a href="#obras" class="obraNav"> Obras </a></li>
-          <li><a href="#servico" class="servicoNav"> Serviços </a></li>
-          <li><a href="#contato" class="contatoNav"> Contato </a></li>
-        </ul>
-      </nav>
-    </header>
+      <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left">
+          <a href="index.html"><img src="images/logo.png"> </a>
+        </div>
+        <nav id="mainav" class="fl_right">
+          <ul class="clear">
+            <li class="active"><a class="nav-link scroll homeNav" href="index.html">Home</a></li>
+            <li><a href="#sobre" class="sobreNav"> Sobre nós </a></li>
+            <li><a href="#obras" class="obraNav"> Obras </a></li>
+            <li><a href="#servico" class="servicoNav"> Serviços </a></li>
+            <li><a href="#contato" class="contatoNav"> Contato </a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div id="pageintro" class="hoc clear">
+      <article>
+        <h3 class="heading">Ar Condicionado e Refrigeração</h3>
+        <p>O Melhor para garantir um clima agradável o ano inteiro</p>
+        <footer><a class="btn" target="_blank"
+            href="https://api.whatsapp.com/send?phone=5511953884518&text=Oi,%20tudo%20bem?%20Gostaria%20de%20pedir%20um%20or%C3%A7amento,%20poderia%20me%20ajudar?">Entre
+            em Contato</a></footer>
+      </article>
+    </div>
   </div>
-  <div id="pageintro" class="hoc clear">
-    <article> 
-      <h3 class="heading">Ar Condicionado e Refrigeração</h3>
-      <p>O Melhor para garantir um clima agradável o ano inteiro</p>
-      <footer><a class="btn" target="_blank" href="https://api.whatsapp.com/send?phone=5511953884518&text=Oi,%20tudo%20bem?%20Gostaria%20de%20pedir%20um%20or%C3%A7amento,%20poderia%20me%20ajudar?">Entre em Contato</a></footer>
-    </article>
-  </div>
-</div>
 
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <ul class="nospace group services">
-	  <article>
-      <div class="sectiontitle"> 
-        <h6 class="heading" style="font-size: 3rem;">Saiba mais</h6>
-      </div>
-		<p>Conheça um pouco do que fazemos</p>		
-	  </article>
-      <li class="one_third first">		
-        <article><a href="#"><img src="images/ice.png"> </a>
-            <br><br>
-          <h6 style="font-size: 2rem;" class="heading">Climatização</h6>
-          <p>A climatização de um ambiente é realizada por um aparelho portátil instalado na parede ou no teto, fornecendo arrefecimento, ventilação e controle de umidade.</p>
+  <div class="wrapper row3">
+    <main class="hoc container clear">
+      <!-- main body -->
+      <ul class="nospace group services">
+        <article>
+          <div class="sectiontitle">
+            <h6 class="heading" style="font-size: 3rem;">Saiba mais</h6>
+          </div>
+          <p>Conheça um pouco do que fazemos</p>
         </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><img src="images/snow.png"> </a>
+        <li class="one_third first">
+          <article><a href="#"><img src="images/ice.png"> </a>
             <br><br>
-          <h6 style="font-size: 2rem;" class="heading">Refrigeração</h6>
-          <p>Sofrendo com o calor? A refrigeração é o processo de redução de temperatura de um determinado ambiente.</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><img src="images/wind.png"> </a>
+            <h6 style="font-size: 2rem;" class="heading">Climatização</h6>
+            <p>A climatização de um ambiente é realizada por um aparelho portátil instalado na parede ou no teto,
+              fornecendo arrefecimento, ventilação e controle de umidade.</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><img src="images/snow.png"> </a>
             <br><br>
-          <h6 style="font-size: 2rem;" class="heading">Ar-condicionado</h6>
-          <p>Através dele é possível assegurar a regulação da temperatura, da umidade e da distribuição do ar. Deixando o clima do seu ambiente agradável.</p>
-        </article>
-      </li>  
-    </ul>
-    <div class="clear"></div>
-  </main>
-</div>
-<div class="wrapper bgded overlay" style="background-image:url('images/12.jpg');" id="sobre">
-  <div class="hoc containertit clear"> 
-    <div class="sectiontitle">
-      <h6 class="heading" style="font-size: 3rem;">SOBRE NÓS</h6>
-    </div>
-    <div class="group">
-      <div class="hoc clear"> 
-        <p><h1 style="font-size: 35px;">A HB Tech é uma empresa no ramo de instalações e manutenções preventivas e corretivas  de Ar condicionado, e refrigeração em geral.</h1></p>
-        <p>E tem como prioridade a excelência no atendimento e na prestação de serviços para os seus clientes. Assim oferecendo um trabalho de qualidade com agilidade e competência.</p>
-        <!-- <footer><a class="btn" href="#">Read More &raquo;</a></footer> -->
-      </div>      
-    </div>  
+            <h6 style="font-size: 2rem;" class="heading">Refrigeração</h6>
+            <p>Sofrendo com o calor? A refrigeração é o processo de redução de temperatura de um determinado ambiente.
+            </p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><img src="images/wind.png"> </a>
+            <br><br>
+            <h6 style="font-size: 2rem;" class="heading">Ar-condicionado</h6>
+            <p>Através dele é possível assegurar a regulação da temperatura, da umidade e da distribuição do ar.
+              Deixando o clima do seu ambiente agradável.</p>
+          </article>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </main>
   </div>
-</div>
-<div class="wrapper row2">
-  <section class="hoc container clear"> 
-    <div class="sectiontitle">
-      <h6 class="heading" id="obras" style="font-size: 3rem;">Obras realizadas</h6>
-    </div>
-    <div class="group">
-      <!-- <div class="one_third first"><a class="imgover" href="#"><img src="images/66.jpg" alt=""></a></div> -->
-      <video class="one_third first" style="width: 259px;" controls>
-        <source src="images/sobre.mp4" type="video/mp4">
-        <source src="images/sobre.mp4" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
-      <div class="two_third">
-        <figure class="group">
-          <div class="one_half first btmspace-30"></a><img src="images/8.jpg" alt=""></div>
-          <div class="one_half btmspace-30"><img src="images/7.jpg" alt=""></div>
-          <div class="one_half first"><img src="images/5.jpg" alt=""></div>
-          <div class="one_half"><img src="images/4.jpg" alt=""></div>
-        </figure>
+  <div class="wrapper bgded overlay" style="background-image:url('images/12.jpg');" id="sobre">
+    <div class="hoc containertit clear">
+      <div class="sectiontitle">
+        <h6 class="heading" style="font-size: 3rem;">SOBRE NÓS</h6>
+      </div>
+      <div class="group">
+        <div class="hoc clear">
+          <p>
+            <h1 style="font-size: 35px;">A HB Tech é uma empresa no ramo de instalações e manutenções preventivas e
+              corretivas de Ar condicionado, e refrigeração em geral.</h1>
+          </p>
+          <p>E tem como prioridade a excelência no atendimento e na prestação de serviços para os seus clientes. Assim
+            oferecendo um trabalho de qualidade com agilidade e competência.</p>
+          <!-- <footer><a class="btn" href="#">Read More &raquo;</a></footer> -->
+        </div>
       </div>
     </div>
-  </section>
-</div>
+  </div>
+  <div class="wrapper row2">
+    <section class="hoc container clear">
+      <div class="sectiontitle">
+        <h6 class="heading" id="obras" style="font-size: 3rem;">Obras realizadas</h6>
+      </div>
+      <div class="group">
+        <!-- <div class="one_third first"><a class="imgover" href="#"><img src="images/66.jpg" alt=""></a></div> -->
+        <video class="one_third first" style="width: 259px;" controls>
+          <source src="images/sobre.mp4" type="video/mp4">
+          <source src="images/sobre.mp4" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+        <div class="two_third">
+          <figure class="group">
+            <div class="one_half first btmspace-30"></a><img src="images/8.jpg" alt=""></div>
+            <div class="one_half btmspace-30"><img src="images/7.jpg" alt=""></div>
+            <div class="one_half first"><img src="images/5.jpg" alt=""></div>
+            <div class="one_half"><img src="images/4.jpg" alt=""></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </div>
 
-<div class="wrapper bgded overlay" style="background-image:url('images/3.jpg');">
-  <div class="hoc container clear"> 
-    <h1 style="font-size: 40px;">Sua empresa segura e refrigerada com o melhor que a tecnologia atual pode oferecer.
-    </h1>
-    <!-- <ul id="stats" class="nospace group">
+  <div class="wrapper bgded overlay" style="background-image:url('images/3.jpg');">
+    <div class="hoc container clear">
+      <h1 style="font-size: 40px;">Sua empresa segura e refrigerada com o melhor que a tecnologia atual pode oferecer.
+      </h1>
+      <!-- <ul id="stats" class="nospace group">
       <li class="one_quarter first"><a href="#"><i class="fa fa-3x fa-slack"></i></a>
         <p>Vestibulum</p>
         <p>12345</p>
@@ -140,136 +153,147 @@
         <p>12345</p>
       </li>
     </ul> -->
-  </div>
-</div>
-
-<div class="wrapper row3">
-  <div class="hoc container clear"> 
-    <div class="sectiontitle">
-      <h6 class="heading" id="servico" style="font-size: 3rem;">Nossos Serviços</h6>
     </div>
-    <ul class="nospace group latest">
-      <li class="one_third first">
-        <article>
-          <figure><img src="images/9.jpg" alt=""></figure>
-          <div class="txtwrap">
-            <h4 class="heading" id= "titleService">Manutenção</h4>
-            <!-- <ul class="nospace meta">
+  </div>
+
+  <div class="wrapper row3">
+    <div class="hoc container clear">
+      <div class="sectiontitle">
+        <h6 class="heading" id="servico" style="font-size: 3rem;">Nossos Serviços</h6>
+      </div>
+      <ul class="nospace group latest">
+        <li class="one_third first">
+          <article>
+            <figure><img src="images/9.jpg" alt=""></figure>
+            <div class="txtwrap">
+              <h4 class="heading" id="titleService">Manutenção</h4>
+              <!-- <ul class="nospace meta">
               <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
               <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
             </ul> -->
-            <p>Fornecemos reparações e manutenção de sistemas de ar condicionado desde residências até grandes empresas.</p>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article>
-          <figure><img src="images/10.jpg" alt=""></figure>
-          <div class="txtwrap">
-            <h4 class="heading" id= "titleService">Instalação</h4>
-            <!-- <ul class="nospace meta">
+              <p>Fornecemos reparações e manutenção de sistemas de ar condicionado desde residências até grandes
+                empresas.</p>
+            </div>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <figure><img src="images/10.jpg" alt=""></figure>
+            <div class="txtwrap">
+              <h4 class="heading" id="titleService">Instalação</h4>
+              <!-- <ul class="nospace meta">
               <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
               <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
             </ul> -->
-            <p>Fazemos a instalação do seu ar condicionado com garantia de qualidade com uma equipe técnica treinada e credenciada para dar todo o suporte.</p>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article>
-          <figure><img src="images/11.jpg" alt=""></figure>
-          <div class="txtwrap">
-            <h4 class="heading" id= "titleService">Higienização</h4>
-            <!-- <ul class="nospace meta">
+              <p>Fazemos a instalação do seu ar condicionado com garantia de qualidade com uma equipe técnica treinada e
+                credenciada para dar todo o suporte.</p>
+            </div>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <figure><img src="images/11.jpg" alt=""></figure>
+            <div class="txtwrap">
+              <h4 class="heading" id="titleService">Higienização</h4>
+              <!-- <ul class="nospace meta">
               <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
               <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
             </ul> -->
-            <p>Limpeza corretiva e preventiva eliminando a proliferação de bactérias e sujeiras para garantir a saúde e a qualidade do ar, sendo essencial para garantir esse funcionamento.</p>
-          </div>
-        </article>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="contact-section" id="contato">
-  <div class="inner-width">
-    <h1>Entre em contato conosco!</h1>
-    <input type="text" class="name" placeholder="Seu nome">
-    <input type="text" id="phone" class="email" placeholder="Seu telefone">
-    <input type="email" class="message" placeholder="Seu e-mail">
-    <textarea rows="1" placeholder="Mensagem" class="message"></textarea>
-    <button>Enviar</button>
-  </div>
-</div>
-
-
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-    <div class="one_quarter first">
-      <img src="images/hbtechbranco.png">
-      
+              <p>Limpeza corretiva e preventiva eliminando a proliferação de bactérias e sujeiras para garantir a saúde
+                e a qualidade do ar, sendo essencial para garantir esse funcionamento.</p>
+            </div>
+          </article>
+        </li>
+      </ul>
     </div>
-    <div class="one_quarter ">
-      <h6 class="heading">Sobre nós</h6>
-      <p>A HB Tech é uma empresa no ramo de instalações e manutenções preventivas e corretivas de Ar condicionado, e refrigeração em geral.</p>
+  </div>
+
+
+  <div class="contact-section" id="contato">
+    <div class="inner-width">
+      <form method="POST" name="contact-form" action="php/send-mail.php">
+        <h1>Entre em contato conosco!</h1>
+        <input name="name" type="text" class="name" placeholder="Seu nome" required>
+        <input name="phone" type="text" id="phone" class="email" placeholder="Seu telefone" required>
+        <input name="email" type="email" class="message" placeholder="Seu e-mail" required>
+        <textarea name="message" rows="3" placeholder="Mensagem" class="message" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
-    <div class="one_quarter">
-      <h6 class="heading">Navegue</h6>
-      <nav>
-        <ul class="nospace">
-          <li><a href="index.html#"><i class="fa fa-lg fa-home" class="homeNav"></i></a></li><br/>
-          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#sobre" class="sobreNav">Sobre nós</a></li></br>
-          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#obras" class="obraNav">Obras</a></li></br>
-          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#servico" class="servicoNav">Serviços</a></li></br> 
-          <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#contato" class="contatoNav">Contato</a></li></br>          
-         
-        </ul>
-      </nav>
-      <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a class="faicon-linkedin" href="https://www.instagram.com/hbtechclimatizacao/"><i class="fab fa-instagram"></i></a></li>
-        <!-- <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+  </div>
+
+
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+      <div class="one_quarter first">
+        <img src="images/hbtechbranco.png">
+
+      </div>
+      <div class="one_quarter ">
+        <h6 class="heading">Sobre nós</h6>
+        <p>A HB Tech é uma empresa no ramo de instalações e manutenções preventivas e corretivas de Ar condicionado, e
+          refrigeração em geral.</p>
+      </div>
+      <div class="one_quarter">
+        <h6 class="heading">Navegue</h6>
+        <nav>
+          <ul class="nospace">
+            <li><a href="index.html#"><i class="fa fa-lg fa-home" class="homeNav"></i></a></li><br />
+            <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#sobre" class="sobreNav">Sobre nós</a></li>
+            </br>
+            <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#obras" class="obraNav">Obras</a></li></br>
+            <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#servico" class="servicoNav">Serviços</a>
+            </li></br>
+            <li><i class="fa fa-lg fa-angle-right iconfooter"></i><a href="#contato" class="contatoNav">Contato</a></li>
+            </br>
+
+          </ul>
+        </nav>
+        <ul class="faico clear">
+          <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a class="faicon-linkedin" href="https://www.instagram.com/hbtechclimatizacao/"><i
+                class="fab fa-instagram"></i></a></li>
+          <!-- <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
         <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
         <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
         <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li> -->
-      </ul>
-    </div>
-    <div class="one_quarter">      
-        <h6 class="heading">Contato</h6>     
-		<nav>
-        <!-- <ul class="nospace"> -->
-			<p><i class="fas fa-map-marker-alt iconfooter"></i>Santo André - São Paulo - Brasil</p>
-			<p><i class="fas fa-phone-alt iconfooter"></i> (11) 95388-4518  </p>
-			<p><i class="fas fa-envelope iconfooter"></i> vitorebella@hotmail.com </p>
-			<p><i class="fas fa-clock iconfooter"></i> Segunda à Sexta das 9h às 18h</p>          
-        <!-- </ul> -->
-      </nav>
-    </div>      
-  </footer>
-</div>
-<div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
-       <!-- <button class="whatsapp">Whats</button> -->
-    <p class="fl_left">Copyright &copy; 2020 by <a href="https://www.decadatech.com/">Decada Technology</a></p>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="heading">Contato</h6>
+        <nav>
+          <!-- <ul class="nospace"> -->
+          <p><i class="fas fa-map-marker-alt iconfooter"></i>Santo André - São Paulo - Brasil</p>
+          <p><i class="fas fa-phone-alt iconfooter"></i> (11) 95388-4518 </p>
+          <p><i class="fas fa-envelope iconfooter"></i> vitorebella@hotmail.com </p>
+          <p><i class="fas fa-clock iconfooter"></i> Segunda à Sexta das 9h às 18h</p>
+          <!-- </ul> -->
+        </nav>
+      </div>
+    </footer>
   </div>
-</div>
-    
-    
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+      <!-- <button class="whatsapp">Whats</button> -->
+      <p class="fl_left">Copyright &copy; 2020 by <a href="https://www.decadatech.com/">Decada Technology</a></p>
+    </div>
+  </div>
+
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=5511941542006&text=Olá! Eu gostaria de saber mais sobre seus serviços." class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a> -->
-    
-    
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/indexFunctions.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script src="layout/scripts/jquery.mask.js"></script>
-<!--ON SCROLL ANIMATE JS CDN-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/indexFunctions.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
+  <script src="layout/scripts/jquery.mask.js"></script>
+  <!--ON SCROLL ANIMATE JS CDN-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
+
 </html>
